@@ -1,0 +1,69 @@
+<mvc:View controllerName="sample.ZDEMO.controller.View1" 
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 
+xmlns="sap.m"
+xmlns:c="sap.ui.core">
+		<App>
+			<pages>
+				<Page title="{i18n>title}">
+					<content>
+						
+					
+						<!--	<Label id="l1" text="Field1" textAlign="Begin" textDirection="LTR" width="5%" labelFor="i1" required="true"/>
+						<Panel>
+						<Input id="i1" width="20%" />
+						<Input id="i2" width="20%" enabled="false" value="Field2"/>
+						</Panel>
+						
+					change="Inputevent"	<VBox>
+					<Button type="Accept" text="Submit" press="onPress"/>
+						<CheckBox text="Ch1"/>
+						</VBox>
+							<Select items="{/STUDENT_DATA_ENTITYSET}"> 
+							<items>
+								<c:Item key="{ID}" text="{NAME}"/>
+							</items>
+						</Select>    -->
+						<Table items="{/results}">
+							
+							<columns>
+							<Column><Label text="ID"/></Column>
+							<Column><Label text="NAME"/></Column>
+							<Column><Label text="BRANCH"/></Column>
+							<Column><Label text="ACTION_ITEM"/></Column>
+							<Column>
+				
+							    <Button icon="sap-icon://create" text="create" press="onCreate"/>
+	
+								</Column>
+					
+						    </columns>
+						   
+						   <items>
+						   	<ColumnListItem>
+						   		<cells>
+						   		
+						   	 	 <Text text="{ID}"/> 
+						   	   		 <Text text="{NAME}"/> 
+						   	   	 <Text text="{BRANCH}"/>  <!-- -->
+						   	 	<HBox>
+								<Button icon="sap-icon://edit" press="onPress"/>
+						        <Button icon="sap-icon://delete"  press="onDelete"/>
+								</HBox>
+						   	
+						    <!--	<CheckBox id='ch' text="ID" select="onSelect"/> text="Edit"
+						    <Text text="{ path: 'ID',
+						   		              formatter: '.func1' }"/>
+						   		           "{= ${ID} > 0 ? 'Error' : 'Success'}"/> inline conditional -->
+						   	</cells>
+						   	</ColumnListItem>
+						   	</items>
+						   	
+				     	 </Table>
+				     	 
+					
+					
+					</content>
+				</Page>
+			</pages>
+		</App>
+</mvc:View>
